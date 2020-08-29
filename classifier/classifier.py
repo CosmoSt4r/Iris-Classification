@@ -15,15 +15,14 @@ train_y = train.Species
 test_X = test[['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']]
 test_y = test.Species
 
-print('Initializing prediction model')
-model = svm.SVC()
 prediction_accuracy = 0
-print('Training prediction model')
+print('Prediction model: training', end='\r')
 while prediction_accuracy < 0.93:
+    model = svm.SVC()
     model.fit(train_X, train_y)
     prediction = model.predict(test_X)
     prediction_accuracy = metrics.accuracy_score(prediction, test_y)
-print('Prediction model is ready')
+print('Prediction model: ready')
 
 
 def predict_iris_type(s_len, s_wid, p_len, p_wid):
