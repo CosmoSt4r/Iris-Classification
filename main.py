@@ -1,6 +1,7 @@
 from app import app
 from classifier.classifier import predict_iris_type
-from flask import render_template, request, redirect
+from static.iris_types.iris_description import give_description
+from flask import render_template, request, url_for
 
 
 @app.route("/", methods=['GET', 'POST'])
@@ -13,7 +14,13 @@ def index():
         p_wid = request.form['petal_width']
 
         predicted_type = predict_iris_type(s_len, s_wid, p_len, p_wid)
-        return f'<h1>{predicted_type}</h1>'
+
+        iris_image = url_for('static', filename=f'iris_types/{predicted_type}.jpg')
+        iris_type = predicted_type.replace('-', ' ')
+        iris_description = give_description(predicted_type)
+
+        return render_template('iris_type.html', iris_image=iris_image,
+                               iris_type=iris_type, iris_description=iris_description)
     else:
         return render_template('index.html')
 

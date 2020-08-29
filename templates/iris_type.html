@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css"/>
+
+  <title>{{ iris_type }}</title>
+</head>
+<body>
+  <form method="get" action="{{ url_for('index') }}">
+    <div class="box">
+
+      <h2 style="font-size: 35px;">{{ iris_type }}</h2>
+
+      <img src="{{ iris_image }}" style="margin-top: 5%; margin-bottom: 5%;"/>
+
+      <h3 style="border: 2px solid green; border-radius: 8px; font-size: 20px; padding: 10px">{{ iris_description }}</h3>
+
+      <button class="btn calculate" type="submit">Back</button>
+
+    </div>
+  </form>
+</body>
+</html>

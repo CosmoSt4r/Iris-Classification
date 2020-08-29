@@ -29,4 +29,5 @@ def predict_iris_type(s_len, s_wid, p_len, p_wid):
     iris = [pd.Series([s_len, s_wid, p_len, p_wid])]
     iris = pd.concat(iris, axis=1).transpose()
 
-    return model.predict(iris)[0]
+    predicted_type = model.predict(iris)[0]
+    return predicted_type
