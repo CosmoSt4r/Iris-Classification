@@ -24,7 +24,7 @@ _________
 
 ### Clone
 
-Clone this repo to your local machine using `https://github.com/CosmoSt4r/Iris-Classifier`
+Clone this repo to your local machine using `git clone https://github.com/CosmoSt4r/Iris-Classification`
 
 ### Required packages
 
