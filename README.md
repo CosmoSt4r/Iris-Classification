@@ -54,7 +54,18 @@ Open your browser and go to the `127.0.0.1:5000` address. You will see the login
 
 ## Neural network
 
-Neural network is built using **Pytorch** and named **IrisNet**. It consists from _4 neurons_ on **input layer**, 
-**2 hidden layers** with _16 neurons_ and _3 neurons_ on **output layer**. Activation functions are: 2 **Sigmoid** 
-functions and **Softmax** on output. **Loss function**: Cross entropy loss. **Optimizer**: Adam. **Learning rate**: 
-_0.001_. You can change parameters as you want for better accuracy. Now **average accuracy** is _95-97%_.
+Neural network is built using **Pytorch** and named **IrisNet**. 
+
+______________________
+
+- **Structure**: 4 x 16 x 16 x 3
+- **Activation functions**: 2 _Sigmoid_ functions and _Softmax_ on output
+- **Loss function**: Cross entropy loss
+- **Optimizer**: Adam
+- **Learning rate**: _0.001_
+
+<br>
+
+You can change parameters as you want for better accuracy. Now **average accuracy** is _95-97%_.
+
+______________________
